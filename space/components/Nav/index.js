@@ -7,7 +7,7 @@ const Nav = () => {
         <Wrapper>
             <Content>
                 <div className="logo">
-                    <Image height="65px" width="65px" className="nasa-logo" alt="NASA" src="https://api.nasa.gov/assets/img/favicons/favicon-192.png" />
+                    <Image priority="true" height="65px" width="65px" className="nasa-logo" alt="NASA" src="https://api.nasa.gov/assets/img/favicons/favicon-192.png" />
                 </div>
 
                 <div className="menu">
