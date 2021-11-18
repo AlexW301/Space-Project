@@ -24,5 +24,20 @@ export const Content = styled.div`
         border: none;
         height: 40px;
         width: 40px;
+        cursor: pointer;
+    }
+
+    .open-menu {
+        display: none;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        top: 80px;
+        left: 0;
+    }
+
+    .show-menu {
+        display: block;
     }
 `;
