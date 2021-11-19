@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 //Styles
 import { Wrapper, Content } from './Nav.styles';
 
@@ -9,10 +10,12 @@ const Nav = () => {
 
     const openMenu = () => {
         if (!menuState) {
-            menu.current.classList.add('show-menu');
+            // menu.current.classList.add('show-menu');
+            menu.current.style.top = '80px'
             setMenuState(true);
         } else if (menuState) {
-            menu.current.classList.remove('show-menu');
+            // menu.current.classList.remove('show-menu');
+            menu.current.style.top = '-2000px'
             setMenuState(false);
         }
     }
@@ -33,7 +36,10 @@ const Nav = () => {
                 </div>
 
                 <div ref={menu} className="open-menu">
-                    hjdfksjdf
+                    <Link href="/"><a className="nav-link">APOD Timeline</a></Link>
+                    <Link href="/"><a className="nav-link">OuterSpace</a></Link>
+                    <Link href="/"><a className="nav-link">NASA</a></Link>
+                    <Link href="/"><a className="nav-link">More Space Shit</a></Link>
                 </div>
             </Content>
         </Wrapper>

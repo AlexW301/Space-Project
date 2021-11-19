@@ -28,16 +28,35 @@ export const Content = styled.div`
     }
 
     .open-menu {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
         position: absolute;
         height: 100vh;
         width: 100%;
-        background-color: #fff;
-        top: 80px;
+        background-color: rgba(0,0,0,.9);
+        top: -2000px;
         left: 0;
+        transition: all .7s ease-in-out;
+        z-index: -30;
+
+        padding: 7rem 0 0 0;
+        align-items: center;
     }
 
-    .show-menu {
+    /* .show-menu {
         display: block;
+    } */
+
+    .nav-link:link,
+    .nav-link:visited {
+        color: white;
+        text-decoration: none;
+        font-size: 3rem;
+    }
+
+    .nav-link:hover,
+    .nav-link:active {
+        
     }
 `;
