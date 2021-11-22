@@ -19,6 +19,10 @@ export const Content = styled.div`
     justify-content: space-between;
     width: 100%;
 
+    .logo {
+        cursor: pointer;
+    }
+
     .menu-btn {
         background-color: transparent;
         border: none;

@@ -18,7 +18,7 @@ export default function Home({ data }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
           </Link>
-          <Image priority="true" className='picture' src={data.hdurl} height='1080px' width='1920px' />
+          <Image priority="true" className='picture' src={data.url} height='1080px' width='1920px' />
         </div>
         <div className="picture-info">
           <h2 className="picture-title">{data.title}</h2>

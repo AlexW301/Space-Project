@@ -1,12 +1,15 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 //Styles
 import { Wrapper, Content } from './Nav.styles';
 
 const Nav = () => {
     const [menuState, setMenuState] = useState(false);
     const menu = useRef(null);
+
+    const router = useRouter();
 
     const openMenu = () => {
         if (!menuState) {
@@ -20,12 +23,32 @@ const Nav = () => {
         }
     }
 
+    const closeMenu = () => {
+        if (menuState) {
+            menu.current.style.top = '-2000px'
+            setMenuState(false);
+        } else {
+            return
+        }
+    }
+
+    useEffect(() => {
+        const handleRouteChange = (url) => {
+            closeMenu();
+            console.log(`App is changing to ${url}`)
+        }
+        router.events.on('routeChangeStart', handleRouteChange)
+    }, [])
+
+
     return (
         <Wrapper>
             <Content>
+                <Link href="/">
                 <div className="logo">
                     <Image priority="true" height="65px" width="65px" className="nasa-logo" alt="NASA" src="https://api.nasa.gov/assets/img/favicons/favicon-192.png" />
                 </div>
+                </Link>
 
                 <div className="menu">
                     <button onClick={() => openMenu()} className="menu-btn">
@@ -36,7 +59,7 @@ const Nav = () => {
                 </div>
 
                 <div ref={menu} className="open-menu">
-                    <Link href="/"><a className="nav-link">APOD Timeline</a></Link>
+                    <Link href="/pictures-from-this-month"><a className="nav-link">This Months Pictures</a></Link>
                     <Link href="/"><a className="nav-link">OuterSpace</a></Link>
                     <Link href="/"><a className="nav-link">NASA</a></Link>
                     <Link href="/"><a className="nav-link">More Space Shit</a></Link>
