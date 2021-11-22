@@ -18,6 +18,7 @@ const PicturesFromThisMonth = ({ data }) => {
                                 <div key={el.title} className="thumbnail">
                                     <Image className='image' src={el.url} height='180px' width='300px'/>
                                     {/* <img src={el.url}></img> */}
+                                    <p className="title">{el.title}</p>
                                 </div>
                             )
                         } else if (el.media_type == 'video') {}

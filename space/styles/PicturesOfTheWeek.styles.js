@@ -29,7 +29,6 @@ export const Content = styled.div`
     }
 
     .gallery {
-        min-height: 100vh;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
@@ -42,12 +41,14 @@ export const Content = styled.div`
             box-shadow: 0px 0px 10px rgba(255, 255, 255, .25);
             cursor: pointer;
             background-color: rgba(0, 0, 0, .25);
-            transition: all 1s ease-in-out;            
+            transition: all 1s ease-in-out;
+            position: relative;
         }
 
         .image {
             object-fit: cover;
-            transition: all 1s ease-in-out;
+            object-position: center;
+            transition: all .7s ease-in-out;
         }
 
         .thumbnail:hover {
@@ -55,6 +56,12 @@ export const Content = styled.div`
             .image {
                 transform: scale(1.1);
             }
+        }
+
+        .title {
+            position: absolute;
+            bottom: -13px;
+            left: 5px;
         }
 
         
