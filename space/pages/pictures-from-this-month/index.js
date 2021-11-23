@@ -1,6 +1,6 @@
 import Image from 'next/dist/client/image';
 //Styles
-import { Wrapper, Content } from '../../styles/PicturesOfTheWeek.styles';
+import { Wrapper, Content } from '../../styles/PicturesOfTheMonth.styles';
 
 const PicturesFromThisMonth = ({ data }) => {
 
@@ -19,6 +19,7 @@ const PicturesFromThisMonth = ({ data }) => {
                                     <Image className='image' src={el.url} height='180px' width='300px'/>
                                     {/* <img src={el.url}></img> */}
                                     <p className="title">{el.title}</p>
+                                    <p className="date">{el.date}</p>
                                 </div>
                             )
                         } else if (el.media_type == 'video') {}

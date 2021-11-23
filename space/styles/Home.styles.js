@@ -45,6 +45,10 @@ export const Content = styled.div`
         position: relative;
     }
 
+    .picture {
+        /* object-fit: contain; */
+    }
+
     .camera-icon {
         position: absolute;
         top: 5px;

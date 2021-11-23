@@ -62,6 +62,14 @@ export const Content = styled.div`
             position: absolute;
             bottom: -13px;
             left: 5px;
+            font-weight: 600;
+        }
+
+        .date {
+            position: absolute;
+            top: -13px;
+            left: 5px;
+            font-weight: 600;
         }
 
         

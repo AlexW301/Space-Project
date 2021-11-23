@@ -38,7 +38,7 @@ const Nav = () => {
             console.log(`App is changing to ${url}`)
         }
         router.events.on('routeChangeStart', handleRouteChange)
-    }, [])
+    }, [menuState])
 
 
     return (
