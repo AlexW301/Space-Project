@@ -35,7 +35,7 @@ export const Content = styled.div`
         border: 1px solid white;
         box-shadow: 0px 0px 20px rgba(255, 255, 255, .25);
         position: relative;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
     }
 
     .picture {
