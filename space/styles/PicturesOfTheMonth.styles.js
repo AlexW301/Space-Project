@@ -71,7 +71,36 @@ export const Content = styled.div`
             left: 5px;
             font-weight: 600;
         }
+    }
 
-        
+    @media screen and (max-width: 1400px) {
+        width: 100%;
+        padding: 100px 50px 0;
+
+        .gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .heading {
+            font-size: 2.7rem;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .gallery {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 60px;
+        }
+
+        .heading {
+            font-size: 1.8rem;
+            margin-bottom: 50px;
+        }
     }
 `;

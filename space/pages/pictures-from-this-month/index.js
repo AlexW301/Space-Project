@@ -1,4 +1,5 @@
 import Image from 'next/dist/client/image';
+import Link from 'next/link';
 //Styles
 import { Wrapper, Content } from '../../styles/PicturesOfTheMonth.styles';
 
@@ -15,12 +16,12 @@ const PicturesFromThisMonth = ({ data }) => {
                     {data.map(el => {
                         if (el.media_type !== 'video') {
                             return (
-                                <div key={el.title} className="thumbnail">
+                                <a href={`/pictures-from-this-month/${el.date}`} key={el.title} className="thumbnail">
                                     <Image className='image' src={el.url} height='180px' width='300px'/>
                                     {/* <img src={el.url}></img> */}
                                     <p className="title">{el.title}</p>
                                     <p className="date">{el.date}</p>
-                                </div>
+                                </a>
                             )
                         } else if (el.media_type == 'video') {}
                         
