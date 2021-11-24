@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     background-image: url('/images/stary-night.jpg');
     background-position: center;
+    background-attachment:fixed;
     /* background-repeat: none; */
     overflow: hidden;
     min-height: 100vh;
