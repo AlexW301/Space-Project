@@ -10,7 +10,7 @@ const PicturesFromThisMonth = ({ data }) => {
     return (
         <Wrapper>
             <Content>
-                <h1 className="heading">Pictures from this month!</h1>
+                <h1 className="heading">Pictures from this month</h1>
 
                 <div className="gallery">
                     {data.map(el => {

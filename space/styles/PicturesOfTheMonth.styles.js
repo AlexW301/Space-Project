@@ -27,6 +27,7 @@ export const Content = styled.div`
         text-shadow: 0px 0px 5px rgba(255, 255, 255, .45);
         text-transform: capitalize;
         margin: 40px 0 80px 0;
+        text-align: center;
     }
 
     .gallery {
