@@ -25,6 +25,13 @@ const PictureDate = ({ data }) => {
                     <Image priority="true" className='picture' src={data.url} height='1080px' width='1920px' />
                 </div>
                 <p className="explanation">{data.explanation}</p>
+                <Link href='/pictures-from-this-month'>
+                <a className="back-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="back-icon" fill="#fff" viewBox="0 0 24 24" stroke="#fff">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                </Link>
             </Content>
         </Wrapper>
     )

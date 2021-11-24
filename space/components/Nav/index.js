@@ -60,9 +60,7 @@ const Nav = () => {
 
                 <div ref={menu} className="open-menu">
                     <Link href="/pictures-from-this-month"><a className="nav-link">This Months Pictures</a></Link>
-                    <Link href="/"><a className="nav-link">OuterSpace</a></Link>
-                    <Link href="/"><a className="nav-link">NASA</a></Link>
-                    <Link href="/"><a className="nav-link">More Space Shit</a></Link>
+                    <Link href="https://api.nasa.gov/"><a className="nav-link">NASA APIs</a></Link>
                 </div>
             </Content>
         </Wrapper>

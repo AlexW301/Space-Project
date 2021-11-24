@@ -18,6 +18,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     .title {
         color: #fff;
@@ -56,12 +57,32 @@ export const Content = styled.div`
         text-align: center;
         line-height: 1.8;
         width: 1100px;
-        margin-bottom: 70px;
+        margin-bottom: 30px;
+    }
+
+    .back-btn {
+        background: transparent;
+        border: none;
+        margin-bottom: 30px;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        cursor: pointer;
+    }
+
+    .back-icon {
+        height: 36px;
+        width: 36px;
     }
 
     @media screen and (max-width: 1400px) {
         width: 100%;
         text-align: center;
+
+        .back-btn {
+            padding: 0px 50px;
+            top: 85px;
+        }
 
         .title {
             width: 100%;
