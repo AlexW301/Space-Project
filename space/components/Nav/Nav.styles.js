@@ -18,6 +18,7 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    text-align: center;
 
     .logo {
         cursor: pointer;
@@ -62,5 +63,12 @@ export const Content = styled.div`
     .nav-link:hover,
     .nav-link:active {
         
+    }
+
+    @media screen and (max-width: 600px) {
+        .nav-link:link,
+        .nav-link:visited {
+        font-size: 2rem;
+    }
     }
 `;

@@ -16,12 +16,14 @@ const PicturesFromThisMonth = ({ data }) => {
                     {data.map(el => {
                         if (el.media_type !== 'video') {
                             return (
-                                <a href={`/pictures-from-this-month/${el.date}`} key={el.title} className="thumbnail">
+                                <Link href={`/pictures-from-this-month/${el.date}`}>
+                                <a key={el.title} className="thumbnail">
                                     <Image priority className='image' src={el.url} height='180px' width='300px'/>
                                     {/* <img src={el.url}></img> */}
                                     <p className="title">{el.title}</p>
                                     <p className="date">{el.date}</p>
                                 </a>
+                                </Link>
                             )
                         } else if (el.media_type == 'video') {}
                         
