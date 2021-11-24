@@ -59,6 +59,7 @@ const Nav = () => {
                 </div>
 
                 <div ref={menu} className="open-menu">
+                    <Link href="/"><a className="nav-link">Home</a></Link>
                     <Link href="/pictures-from-this-month"><a className="nav-link">This Months Pictures</a></Link>
                     <Link href="https://api.nasa.gov/"><a className="nav-link">NASA APIs</a></Link>
                 </div>
