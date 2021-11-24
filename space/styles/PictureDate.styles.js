@@ -37,10 +37,11 @@ export const Content = styled.div`
         box-shadow: 0px 0px 20px rgba(255, 255, 255, .25);
         position: relative;
         margin-bottom: 50px;
+        background: rgba(0, 0, 0, .8);
     }
 
     .picture {
-        object-fit: cover;
+        object-fit: contain;
         object-position: bottom;
     }
 

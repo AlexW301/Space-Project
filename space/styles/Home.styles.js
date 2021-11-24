@@ -43,10 +43,11 @@ export const Content = styled.div`
         border: 1px solid white;
         box-shadow: 0px 0px 20px rgba(255, 255, 255, .25);
         position: relative;
+        background: rgba(0, 0, 0, .8);
     }
 
     .picture {
-        /* object-fit: contain; */
+        object-fit: contain;
     }
 
     .camera-icon {
